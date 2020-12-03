@@ -29,7 +29,7 @@ PM_START_TEXT = """
 **Hello {}, My Name is {}!** 
 I am an **SUPERB**  group management bot.
 You can find the list of available commands with /help.
-
+Special thanks to @TechnoSecurityBot for helping in developing me.
 """
 
 HELP_STRINGS = """
@@ -142,7 +142,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🤝HELP🤝",
                                                                        callback_data="help_back".format(bot.username)),
                                                                                    InlineKeyboardButton(text="🧑‍💻My Creator🧑‍💻",
-                                                                       url="t.me/NOOBS_GANG")],
+                                                                       url=f"tg://user?id{OWNER_ID}")],
                                                                                    [InlineKeyboardButton(text="ADD TECHNO TO YOUR GROUP",
                                                                        url="t.me/{}?startgroup=true".format(bot.username)),
                                                                                    InlineKeyboardButton(text="Source Code",
