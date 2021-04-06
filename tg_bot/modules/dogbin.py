@@ -15,7 +15,7 @@ from tg_bot.modules.disable import DisableAbleCommandHandler
 BASE_URL = 'https://del.dog'
 
 @run_async
-def paste(bot: Bot, update: Update, args: List[str]):
+def dpaste(bot: Bot, update: Update, args: List[str]):
     message = update.effective_message
 
     if message.reply_to_message:
@@ -117,7 +117,7 @@ def get_paste_stats(bot: Bot, update: Update, args: List[str]):
 
 
 __help__ = """
- - /paste: Create a paste or a shortened url using [dogbin](https://del.dog)
+ - /dpaste: Create a paste or a shortened url using [dogbin](https://del.dog)
  - /getpaste: Get the content of a paste or shortened url from [dogbin](https://del.dog)
  - /pastestats: Get stats of a paste or shortened url from [dogbin](https://del.dog)
 """
